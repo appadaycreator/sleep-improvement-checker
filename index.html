@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>睡眠改善診断 - 睡眠の質をチェックして改善方法を無料診断</title>
+<meta name="description" content="10問のセルフチェックで睡眠の質を診断。睡眠スコアに応じた改善方法・快眠グッズ・睡眠障害チェックポイントを提案。ピッツバーグ睡眠質問票を参考にした無料診断ツール。">
+<meta property="og:title" content="睡眠改善診断 | 睡眠の質を無料診断・改善方法を提案">
+<meta property="og:description" content="10問で睡眠スコアを診断。快眠のための改善方法・グッズを提案する無料ツール。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://appadaycreator.github.io/sleep-improvement-checker/">
+<meta property="og:image" content="https://appadaycreator.github.io/sleep-improvement-checker/ogp.png">
+<link rel="canonical" href="https://appadaycreator.github.io/sleep-improvement-checker/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"睡眠改善診断","description":"睡眠の質を診断して改善方法を提案","url":"https://appadaycreator.github.io/sleep-improvement-checker/","applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"}}</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","s3t9vl8h3v");</script>
+<script>window.onerror=function(m,s,l,c,e){console.warn('Error:',m);return true;};window.addEventListener('unhandledrejection',function(e){console.warn('Rejection:',e.reason);});</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#4338ca 100%);min-height:100vh;}
+  .card{background:white;border-radius:1rem;box-shadow:0 4px 24px rgba(0,0,0,0.15);}
+  .btn-primary{background:#6366f1;color:white;border:none;border-radius:.75rem;padding:.875rem 2rem;font-size:1.05rem;font-weight:700;cursor:pointer;transition:all .2s;width:100%;display:block;}
+  .btn-primary:hover{background:#4f46e5;transform:translateY(-1px);}
+  .option-btn{border:2px solid #e5e7eb;border-radius:.75rem;padding:.75rem 1rem;cursor:pointer;transition:all .2s;background:white;width:100%;text-align:left;margin-bottom:.5rem;font-size:.9rem;}
+  .option-btn:hover,.option-btn.selected{border-color:#6366f1;background:#eef2ff;font-weight:600;}
+  .screen{display:none;}.screen.active{display:block;}
+  .progress-track{background:#c7d2fe;border-radius:9999px;height:8px;}
+  .progress-bar{background:#6366f1;height:8px;border-radius:9999px;transition:width .4s ease;}
+</style>
+</head>
+<body class="font-sans">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="max-w-lg mx-auto px-4 py-10">
+
+  <div id="screen-intro" class="screen active">
+    <div class="text-center mb-8">
+      <div class="text-6xl mb-4">😴</div>
+      <h1 class="text-2xl font-bold text-white mb-2">睡眠改善診断</h1>
+      <p class="text-indigo-200 text-sm">10問のチェックであなたの睡眠の質を診断<br>改善方法・おすすめグッズを提案します</p>
+    </div>
+    <div class="card p-6 mb-6 space-y-4">
+      <div class="flex items-center gap-3"><div class="text-2xl">💤</div><div><div class="font-bold text-gray-800 text-sm">睡眠スコアを算出</div><div class="text-indigo-600 text-sm">4段階で睡眠の質を判定</div></div></div>
+      <div class="flex items-center gap-3"><div class="text-2xl">🛏️</div><div><div class="font-bold text-gray-800 text-sm">改善方法を提案</div><div class="text-gray-600 text-sm">スコア別に具体的なアドバイス</div></div></div>
+      <div class="flex items-center gap-3"><div class="text-2xl">🔒</div><div><div class="font-bold text-gray-800 text-sm">プライバシー保護</div><div class="text-gray-600 text-sm">回答データは保存されません</div></div></div>
+    </div>
+    <div class="bg-indigo-900 border border-indigo-700 rounded-lg p-3 mb-5 text-xs text-indigo-200">⚠️ 本ツールは参考情報の提供のみです。睡眠障害が疑われる場合は医療機関を受診してください。</div>
+    <button class="btn-primary" onclick="startDiagnosis()">睡眠チェックを始める →</button>
+  </div>
+
+  <div id="screen-questions" class="screen">
+    <div class="mb-6">
+      <div class="flex justify-between text-xs text-indigo-200 mb-1"><span id="q-label">質問 1 / 10</span><span id="q-pct">10%</span></div>
+      <div class="progress-track"><div class="progress-bar" id="prog" style="width:10%"></div></div>
+    </div>
+    <div class="card p-5">
+      <p class="text-xs text-gray-500 mb-1">過去1ヶ月の状態についてお答えください</p>
+      <h2 class="text-base font-bold text-gray-800 mb-4" id="q-text"></h2>
+      <div id="opts"></div>
+    </div>
+  </div>
+
+  <div id="screen-loading" class="screen text-center py-20">
+    <div class="text-5xl mb-4 text-white">😴</div>
+    <div class="text-white font-bold text-lg mb-2">分析中...</div>
+    <div class="text-indigo-200 text-sm">睡眠スコアを計算しています</div>
+  </div>
+
+  <div id="screen-results" class="screen">
+    <div class="text-center mb-6">
+      <div class="text-5xl mb-3" id="res-emoji">😊</div>
+      <h2 class="text-2xl font-bold text-white">睡眠診断結果</h2>
+    </div>
+    <div class="card p-6 mb-4">
+      <div class="text-center mb-4">
+        <div class="text-3xl font-bold mb-1" id="res-level" style="color:#6366f1;"></div>
+        <div class="text-gray-500 text-sm" id="res-score"></div>
+      </div>
+      <div class="bg-gray-100 rounded-full h-5 mb-4"><div class="h-5 rounded-full" id="res-meter" style="width:50%;background:#6366f1;transition:width 0.8s;"></div></div>
+      <p class="text-sm text-gray-700 mb-3" id="res-desc"></p>
+      <div class="bg-indigo-50 rounded-lg p-4">
+        <div class="font-bold text-indigo-800 text-sm mb-2">💡 今夜からできる改善策</div>
+        <ul class="text-sm text-gray-700 space-y-1" id="res-tips"></ul>
+      </div>
+    </div>
+    <div class="card p-6 mb-4">
+      <h3 class="font-bold text-gray-800 mb-3">🛏️ 快眠グッズを探す</h3>
+      <div id="aff-area"></div>
+    </div>
+    <div class="card p-4 mb-4 text-xs space-y-1">
+      <div><a href="/mental-health-checker/" class="text-indigo-600 underline">メンタルヘルス・ストレス診断 →</a></div>
+      <div><a href="/gym-finder/" class="text-indigo-600 underline">運動でさらに睡眠を改善 →</a></div>
+    </div>
+    <button class="btn-primary" style="background:#6b7280;" onclick="restart()">もう一度チェックする</button>
+  </div>
+
+</div>
+
+<script>
+var Qs=[
+  "布団に入ってから眠るまでどれくらいかかりますか？",
+  "夜中に目が覚めることはありますか？",
+  "希望より早く目が覚めてしまいますか？",
+  "睡眠の質（深さ・熟睡感）に満足していますか？",
+  "日中に眠気・倦怠感を感じることがありますか？",
+  "就寝前1時間以内にスマホを長時間使いますか？",
+  "就寝・起床時間はほぼ一定ですか？",
+  "カフェイン（コーヒー等）を午後3時以降に摂りますか？",
+  "寝室の環境（温度・音・光）に問題を感じますか？",
+  "ストレスや心配事が頭から離れず眠れないことがありますか？"
+];
+var OPTS=[["10分以内（0）","15〜30分（1）","30〜60分（2）","60分以上（3）"],["全くない（0）","週1〜2回（1）","週3〜4回（2）","ほぼ毎日（3）"],["全くない（0）","少しある（1）","ときどき（2）","ほぼ毎日（3）"],["満足（0）","やや不満（1）","不満（2）","とても不満（3）"],["全くない（0）","少しある（1）","ときどき（2）","ほぼ毎日（3）"],["全く使わない（0）","たまに（1）","よく使う（2）","毎日必ず（3）"],["ほぼ一定（0）","少しバラツキ（1）","かなりバラツキ（2）","全くバラバラ（3）"],["全く飲まない（0）","たまに（1）","よく飲む（2）","毎日必ず（3）"],["問題なし（0）","少し気になる（1）","気になる（2）","かなり問題（3）"],["全くない（0）","少しある（1）","ときどき（2）","ほぼ毎日（3）"]];
+var cur=0,total=0;
+var levels=[
+  {max:8,emoji:'😊',text:'良好な睡眠',color:'#16a34a',desc:'現在の睡眠の質は良好です。現在の生活リズムを維持して予防的なケアを続けましょう。',tips:['現在の就寝・起床時間を守る','適度な運動を継続する','カフェインは午後3時まで']},
+  {max:16,emoji:'😐',text:'やや低下した睡眠の質',color:'#f59e0b',desc:'睡眠の質に改善の余地があります。いくつかの習慣を見直すことで大幅に改善できます。',tips:['就寝1時間前からスマホをオフ','寝室温度を18〜22℃に調整','カフェインを午後3時以降は控える','週3回以上の軽い運動を取り入れる']},
+  {max:22,emoji:'😟',text:'睡眠の質が低下',color:'#f97316',desc:'睡眠に問題が生じている状態です。複数の原因が重なっている可能性があります。積極的な改善を。',tips:['睡眠外来・クリニックへの相談を検討','寝室を「睡眠専用空間」にする（TV・スマホ不可）','アルコールを就寝3時間前からゼロにする','マグネシウムサプリの摂取を検討する']},
+  {max:30,emoji:'😰',text:'深刻な睡眠障害の可能性',color:'#dc2626',desc:'深刻な睡眠障害（不眠症・睡眠時無呼吸等）の可能性があります。早めに専門家に相談してください。',tips:['すぐに睡眠専門クリニックを受診する','睡眠薬の自己判断は避ける','睡眠ログをつけて医師に見せる']}
+];
+
+function startDiagnosis(){show('questions');renderQ();}
+function show(name){document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});document.getElementById('screen-'+name).classList.add('active');}
+function renderQ(){
+  var pct=Math.round((cur+1)/Qs.length*100);
+  document.getElementById('q-label').textContent='質問 '+(cur+1)+' / '+Qs.length;
+  document.getElementById('q-pct').textContent=pct+'%';
+  document.getElementById('prog').style.width=pct+'%';
+  document.getElementById('q-text').textContent=Qs[cur];
+  var c=document.getElementById('opts');c.innerHTML='';
+  OPTS[cur].forEach(function(opt,i){var b=document.createElement('button');b.className='option-btn';b.textContent=opt;b.onclick=function(){pick(i);};c.appendChild(b);});
+}
+function pick(score){
+  total+=score;
+  document.querySelectorAll('.option-btn').forEach(function(b,j){b.classList.toggle('selected',j===score);});
+  setTimeout(function(){cur++;if(cur<Qs.length){renderQ();}else{show('loading');setTimeout(showResults,1800);}},300);
+}
+function showResults(){
+  var pct=Math.round(total/30*100);
+  var level=levels[0];for(var i=0;i<levels.length;i++){if(total<=levels[i].max){level=levels[i];break;}}
+  document.getElementById('res-emoji').textContent=level.emoji;
+  document.getElementById('res-level').textContent=level.text;document.getElementById('res-level').style.color=level.color;
+  document.getElementById('res-score').textContent='スコア: '+total+'/30点 ('+pct+'%)';
+  document.getElementById('res-meter').style.width=pct+'%';document.getElementById('res-meter').style.background=level.color;
+  document.getElementById('res-desc').textContent=level.desc;
+  var tipsEl=document.getElementById('res-tips');tipsEl.innerHTML='';
+  level.tips.forEach(function(t){var li=document.createElement('li');li.textContent='• '+t;tipsEl.appendChild(li);});
+  var affHtml='<a href="https://www.amazon.co.jp/s?k=快眠+枕+マットレス&tag=appadaycrea0f-22" target="_blank" rel="noopener" class="block bg-yellow-400 text-gray-900 font-bold py-3 px-4 rounded-xl text-center text-sm hover:bg-yellow-500 transition mb-2">Amazonで快眠グッズを探す →</a>';
+  if(total>=17)affHtml+='<a href="A8_SLEEP_CLINIC_URL_PLACEHOLDER" target="_blank" rel="noopener sponsored" class="block bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl text-center text-sm hover:bg-indigo-700 transition">オンライン睡眠外来に相談する →</a>';
+  affHtml+='<p class="text-xs text-gray-400 text-center mt-1">Amazonアソシエイトプログラム参加中</p>';
+  document.getElementById('aff-area').innerHTML=affHtml;
+  show('results');
+}
+function restart(){cur=0;total=0;show('intro');}
+</script>
+</body>
+</html>
