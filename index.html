@@ -146,7 +146,7 @@ function showResults(){
   var tipsEl=document.getElementById('res-tips');tipsEl.innerHTML='';
   level.tips.forEach(function(t){var li=document.createElement('li');li.textContent='• '+t;tipsEl.appendChild(li);});
   var affHtml='<a href="https://www.amazon.co.jp/s?k=快眠+枕+マットレス&tag=appadaycrea0f-22" target="_blank" rel="noopener" class="block bg-yellow-400 text-gray-900 font-bold py-3 px-4 rounded-xl text-center text-sm hover:bg-yellow-500 transition mb-2">Amazonで快眠グッズを探す →</a>';
-  if(total>=17)affHtml+='<a href="A8_SLEEP_CLINIC_URL_PLACEHOLDER" target="_blank" rel="noopener sponsored" class="block bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl text-center text-sm hover:bg-indigo-700 transition">オンライン睡眠外来に相談する →</a>';
+  if(total>=17)affHtml+='<a href="https://px.a8.net/svt/ejp?a8mat=4AVCO8+3ORU2Y+5JTC+5YRHE" target="_blank" rel="noopener sponsored" class="block bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl text-center text-sm hover:bg-indigo-700 transition">ヨンデミーで睡眠・健康の読書習慣を作る →</a><img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4AVCO8+3ORU2Y+5JTC+5YRHE" alt="">';
   affHtml+='<p class="text-xs text-gray-400 text-center mt-1">Amazonアソシエイトプログラム参加中</p>';
   document.getElementById('aff-area').innerHTML=affHtml;
   show('results');
