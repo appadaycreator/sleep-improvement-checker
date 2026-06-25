@@ -825,6 +825,93 @@
       font-size: 0.8rem;
     }
 
+    /* ===== SCORE RANGE LEGEND ===== */
+    .score-legend {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 10px 14px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .score-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 0;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .legend-range {
+      margin-left: auto;
+      font-weight: 600;
+      font-size: 0.75rem;
+      opacity: 0.8;
+    }
+
+    /* ===== SCORE COMPARE CARDS ===== */
+    .score-compare-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .score-compare-card {
+      background: #f8faff;
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      border-left: 4px solid transparent;
+    }
+
+    .score-compare-scenario {
+      font-size: 0.84rem;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .score-compare-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .score-compare-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      border-radius: 9999px;
+      padding: 2px 8px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    /* ===== FEATURE NUMBER BADGE ===== */
+    .feature-num-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #6366f1;
+      color: white;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
     /* ===== ADSENSE ===== */
     .adsense-wrap {
       max-width: 1100px;
@@ -1011,6 +1098,28 @@
           <text x="80" y="94" class="score-center-text score-label">睡眠スコア</text>
         </svg>
         <span class="score-badge">非常に良好</span>
+        <div class="score-legend">
+          <div class="score-legend-item">
+            <span class="legend-dot" style="background:#ef4444;"></span>
+            <span>深刻</span>
+            <span class="legend-range">23-30点</span>
+          </div>
+          <div class="score-legend-item">
+            <span class="legend-dot" style="background:#f97316;"></span>
+            <span>低下</span>
+            <span class="legend-range">17-22点</span>
+          </div>
+          <div class="score-legend-item">
+            <span class="legend-dot" style="background:#eab308;"></span>
+            <span>やや低下</span>
+            <span class="legend-range">9-16点</span>
+          </div>
+          <div class="score-legend-item">
+            <span class="legend-dot" style="background:#22c55e;"></span>
+            <span>良好</span>
+            <span class="legend-range">0-8点</span>
+          </div>
+        </div>
       </div>
       <img src="../assets/photos/photo_02.jpg" alt="睡眠イメージ" class="hero-photo2">
     </div>
@@ -1087,36 +1196,42 @@
   <div class="features-grid">
     <div class="feature-card">
       <img src="../assets/photos/photo_07.jpg" alt="10問以内完結">
+      <div class="feature-num-badge">01</div>
       <div class="feature-icon">⏱</div>
       <h3>10問以内完結</h3>
       <p>忙しい方でも5分で診断完了。PSQI基準の10問で精度高く睡眠の質を判定。</p>
     </div>
     <div class="feature-card">
       <img src="../assets/photos/photo_08.jpg" alt="睡眠スコア測定">
+      <div class="feature-num-badge">02</div>
       <div class="feature-icon">📊</div>
       <h3>睡眠スコア測定</h3>
       <p>0〜30点の睡眠スコアを算出。低いほど睡眠の質が高い独自指標で客観評価。</p>
     </div>
     <div class="feature-card">
       <img src="../assets/photos/photo_09.jpg" alt="4段階詳細判定">
+      <div class="feature-num-badge">03</div>
       <div class="feature-icon">🔍</div>
       <h3>4段階詳細判定</h3>
       <p>良好・やや低下・低下・深刻の4段階で現在の睡眠状態を明確に判定。</p>
     </div>
     <div class="feature-card">
       <img src="../assets/photos/photo_10.jpg" alt="AIパーソナライズ提案">
+      <div class="feature-num-badge">04</div>
       <div class="feature-icon">🤖</div>
       <h3>AIパーソナライズ提案</h3>
       <p>スコアと回答傾向からAIが個別の改善アドバイスを提案。あなたに最適な対策を提示。</p>
     </div>
     <div class="feature-card">
       <img src="../assets/photos/photo_11.jpg" alt="SNS・CSV共有">
+      <div class="feature-num-badge">05</div>
       <div class="feature-icon">📤</div>
       <h3>SNS・CSV共有</h3>
       <p>診断結果をLINE・X（Twitter）でシェア、またはCSV出力して記録に活用できます。</p>
     </div>
     <div class="feature-card">
       <img src="../assets/photos/photo_12.jpg" alt="シナリオ比較機能">
+      <div class="feature-num-badge">06</div>
       <div class="feature-icon">🔄</div>
       <h3>シナリオ比較機能</h3>
       <p>現在の結果と改善後のシミュレーションを比較。複数パターンで最適解を見つけます。</p>
@@ -1195,19 +1310,36 @@
       <img src="../assets/photos/photo_04.jpg" alt="シナリオ比較" class="section-photo" style="margin-top:24px;">
     </div>
     <div class="compare-right">
-      <div class="compare-benefit">
-        <span class="pin">📌</span>
-        <span>複数の改善シナリオを並べて比較</span>
+      <div class="score-compare-cards">
+        <div class="score-compare-card" style="border-left-color:#ef4444;">
+          <div>
+            <div class="score-compare-scenario">現在の状態</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="score-compare-num" style="color:#ef4444;">54点</div>
+            <span class="score-compare-badge" style="background:#fef2f2;color:#ef4444;">低下</span>
+          </div>
+        </div>
+        <div class="score-compare-card" style="border-left-color:#f59e0b;">
+          <div>
+            <div class="score-compare-scenario">スマホ制限 7日後</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="score-compare-num" style="color:#f59e0b;">47点</div>
+            <span class="score-compare-badge" style="background:#fffbeb;color:#f59e0b;">やや低下</span>
+          </div>
+        </div>
+        <div class="score-compare-card" style="border-left-color:#22c55e;">
+          <div>
+            <div class="score-compare-scenario">生活改善 30日後</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="score-compare-num" style="color:#22c55e;">32点</div>
+            <span class="score-compare-badge" style="background:#f0fdf4;color:#22c55e;">改善中</span>
+          </div>
+        </div>
       </div>
-      <div class="compare-benefit">
-        <span class="pin">📌</span>
-        <span>各習慣が睡眠に与える影響を数値で確認</span>
-      </div>
-      <div class="compare-benefit">
-        <span class="pin">📌</span>
-        <span>最も効果的な改善策を見つけられる</span>
-      </div>
-      <img src="../assets/photos/photo_05.jpg" alt="改善策" class="section-photo" style="margin-top:20px;">
+      <img src="../assets/photos/photo_05.jpg" alt="改善策" class="section-photo">
     </div>
   </div>
 </section>

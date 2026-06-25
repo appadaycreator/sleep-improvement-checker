@@ -274,10 +274,29 @@
         <button class="btn-amber-lg" onclick="startDiagnosis()" style="margin-top:8px;">診断を始める →</button>
       </div>
       <div class="hero-right">
-        <img src="assets/photos/photo_02.jpg" alt="睡眠改善のイメージ" style="width:100%;border-radius:16px;max-height:240px;object-fit:cover;display:block;">
-        <div style="background:rgba(255,255,255,0.95);border-radius:10px;padding:12px;margin-top:10px;text-align:center;">
-          <div style="font-size:11px;color:#6b7280;margin-bottom:4px;">サンプルスコア</div>
-          <div style="font-size:18px;font-weight:800;color:#16a34a;">12点 / 良好な睡眠</div>
+        <img src="assets/photos/photo_02.jpg" alt="睡眠改善のイメージ" style="width:100%;border-radius:16px;max-height:180px;object-fit:cover;display:block;">
+        <div style="background:rgba(255,255,255,0.95);border-radius:12px;padding:14px 16px;margin-top:10px;">
+          <div style="font-size:10px;color:#6b7280;margin-bottom:6px;text-align:center;">スコアサンプル</div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:10px;">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <circle cx="40" cy="40" r="32" fill="none" stroke="rgba(99,102,241,0.15)" stroke-width="8"/>
+              <circle cx="40" cy="40" r="32" fill="none" stroke="#22c55e" stroke-width="8"
+                stroke-dasharray="50 201"
+                stroke-linecap="round"
+                transform="rotate(-90 40 40)"/>
+              <text x="40" y="44" text-anchor="middle" fill="#16a34a" font-size="16" font-weight="800" font-family="sans-serif">12</text>
+            </svg>
+            <div>
+              <div style="font-size:11px;color:#6b7280;">睡眠スコア</div>
+              <div style="font-size:14px;font-weight:800;color:#16a34a;">良好な睡眠</div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+            <div style="background:#fef2f2;border-radius:6px;padding:4px 6px;font-size:10px;color:#ef4444;font-weight:600;">深刻 23-30点</div>
+            <div style="background:#fff7ed;border-radius:6px;padding:4px 6px;font-size:10px;color:#f97316;font-weight:600;">低下 17-22点</div>
+            <div style="background:#fffbeb;border-radius:6px;padding:4px 6px;font-size:10px;color:#eab308;font-weight:600;">やや低下 9-16点</div>
+            <div style="background:#f0fdf4;border-radius:6px;padding:4px 6px;font-size:10px;color:#16a34a;font-weight:600;">良好 0-8点</div>
+          </div>
         </div>
       </div>
     </div>
